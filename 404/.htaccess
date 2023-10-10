@@ -1,0 +1,12 @@
+Options -Indexes
+
+
+RewriteEngine On
+RewriteBase /gaming2/404
+RewriteRule ^/gaming2/404 index.html [L,NC]
+
+
+
+ErrorDocument 404 ./gaming2/404/index.html
+
+ErrorDocument 403 ./gaming2/403/index.html

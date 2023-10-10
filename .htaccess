@@ -1,0 +1,58 @@
+Options -Indexes
+
+
+RewriteEngine On
+RewriteBase /gaming2
+RewriteRule ^/gaming2 index.php [L,NC]
+
+
+RewriteRule ^about about-us.php [L,NC]
+
+RewriteRule ^blog-details blog-details.php [L,NC]
+
+RewriteRule ^blog blog.php [L,NC]
+
+RewriteRule ^community community.php [L,NC]
+
+RewriteRule ^contact contact.php [L,NC]
+
+RewriteRule ^game game-overview.php [L,NC]
+
+RewriteRule ^single game-single.php [L,NC]
+
+RewriteRule ^shop shop.php [L,NC]
+
+RewriteRule ^upcoming upcoming-games.php [L,NC]
+
+RewriteRule ^cart cart.php [L,NC]
+
+RewriteRule ^checkout checkout.php [L,NC]
+
+
+
+
+
+RewriteCond %{TPS_REQUEST} .*/login.php
+RewriteRule ^login.php /copy4/404/index.html [L,NC]
+
+
+
+
+
+RewriteRule ^register register.php [L,NC]
+
+
+
+
+RewriteRule ^logout logout.php [L,NC]
+
+
+RewriteRule ^verification$ verification.php?email=$1 [L,NC]
+
+
+
+
+ErrorDocument 404 /gaming2/404/index.html
+
+
+ErrorDocument 403 /gaming2/403/index.html
